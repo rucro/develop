@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>爆速JSONP</title>
+ <script type="text/javascript">
+function function_name( data ){	// <- これのことを「コールバック関数」といいます。
+	alert( data["moon_en"] );
+}
+</script>
+</head>
+<body>
+<div>
+    API参考サイトhttps://kijtra.com/article/date-info-api-v1/
+</div>
+<script type='text/javascript' src='https://dateinfoapi.appspot.com/v1?callback=function_name'></script>
+</body>
+</html>

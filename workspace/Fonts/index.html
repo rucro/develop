@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>WORDSWORDS</title>
+	<link id="fonts" href='https://fonts.googleapis.com/css?family=Galada|Katibeh|Secular+One|Lemonada|Amatica+SC|Revalia|Coiny|Bungee+Shade|Rakkas|Metal+Mania|Covered+By+Your+Grace|Henny+Penny|Sevillana|Mr+Dafoe|Creepster|Londrina+Outline|Akronim|Ruthie|Playfair+Display+SC|Zeyada|Six+Caps|Black+Ops+One|Peralta|Quantico|Radley|Hanalei|Codystar|Butcherman|Keania+One|Nosifer' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="fonts.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+	
+	var changefont = [];
+	changefont = ["Crash","Galada","Katibeh","Secular One","Lemonada","Amatica SC","Revalia","Coiny","Bungee Shade","Rakkas","Metal Mania","Covered By Your Grace","Henny Penny","Sevillana","Mr Dafoe","Creepster","Londrina Outline","Akronim","Ruthie","Playfair Display SC","Zeyada","Six Caps","Black Ops One","Peralta","Quantico","Radley","Hanalei","Codystar","Butcherman","Keania One","Nosifer"];
+	
+	var i = 0;
+	
+	    /*ボタン押下*/
+	    $(document).on("click","#change",function (){
+	        	if (changefont[i] == undefined){
+	        		i = 0;
+	        		$("body").css('font-family',''+changefont[i++]+'');
+	        	}else{
+	        		$("body").css('font-family',''+changefont[i++]+'');
+	        	}
+	    });
+        
+	</script>
+</head>
+<body>
+	<input type="button" id="change" value="押して">
+    <p style="font-size: 200%;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum </p><br>
+    <p style="font-size: 200%;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum </p>
+    
+</body>
+</html>

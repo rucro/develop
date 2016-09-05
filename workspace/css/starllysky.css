@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  /*
+  width:100%;
+  */
+  height:2000px;
+  display:block;
+}
+
+.stars {
+  background:#000 url(../images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(../images/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background:transparent url(../images/clouds.png) repeat top center;
+    z-index:3;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
+
+#container{
+  position:relative;
+  width: 900px;
+  height:auto;
+  margin:20px auto;
+  z-index:5;
+  color:#FFF;
+}
+#container p{
+	width:900px;
+	height:600px;
+	margin-bottom:20px;
+}
+#container p img{
+	border: 10px solid #FFFFFF;
+	width:880px;
+}
+#container table{
+	margin:0;
+}
+#container tr {
+	padding:15px;
+}
+#container tr th{
+	background:#333;
+	border:1px solid #666;
+	padding:10px;
+}
+#container tr td{
+	border:1px solid #666;
+	width:300px;
+	padding:10px;
+}
+
+
+/*CSSでﾎﾞﾀﾝ設定*/
+.button {
+	display: inline-block;
+	width: 250px;
+	height: 130px;
+	margin: 40px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 54px;
+	outline: none;
+	background-color: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	line-height: 125px;
+	font-family: SimSun;
+	font-size: 50px;
+}
+.button::before,
+.button::after {
+	/*position: absolute;*/
+	z-index:5;
+	display: block;
+	content: '';
+}
+
+.button,
+.button::before,
+.button::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+
+.button:hover {
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.menubutton{
+    /*position:relative;z-index:5;は星空より手前に出す項目に適用*/
+    position:relative;
+	z-index:5;
+	text-align: center;
+	
+}
+
+.title{
+    margin-top: 110px;
+}
+
+.footer{
+    bottom: -3px;
+    position: absolute;
+    max-width:800px;
+    min-width:500px;
+}
+
+
+#star {
+    
+    
+	animation: animation04 2s infinite ease 1s both;
+}
+
+
+@keyframes animation04 {
+	from {
+		transform: translate(0,0);
+	}
+	to {
+		transform: translate(50px,50px);
+	}
+}
+
